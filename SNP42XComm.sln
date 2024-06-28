@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SanicaSNP42X", "SanicaSNP42X\SanicaSNP42X.csproj", "{51FBB333-EC91-4F1E-836C-D57417BF5F0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SanicaSNP42XDemo", "SanicaSNP42XDemo\SanicaSNP42XDemo.csproj", "{753ECE9D-60F4-4EAC-A8DD-86F5FC1421EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SNP42XSimulator", "SNP42XSimulator\SNP42XSimulator.csproj", "{F236A15F-CF90-4D4C-9C25-F5A624989F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSimulateSNP42X", "WebSimulateSNP42X\WebSimulateSNP42X\WebSimulateSNP42X.csproj", "{8A7FB263-2B9A-414E-8881-E3A3F7405C0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSimulateSNP42X.Tests", "WebSimulateSNP42X\WebSimulateSNP42X.Tests\WebSimulateSNP42X.Tests.csproj", "{DDA051D6-364A-47B7-91CE-3501EBF3791C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51FBB333-EC91-4F1E-836C-D57417BF5F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FBB333-EC91-4F1E-836C-D57417BF5F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FBB333-EC91-4F1E-836C-D57417BF5F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FBB333-EC91-4F1E-836C-D57417BF5F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753ECE9D-60F4-4EAC-A8DD-86F5FC1421EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753ECE9D-60F4-4EAC-A8DD-86F5FC1421EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753ECE9D-60F4-4EAC-A8DD-86F5FC1421EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753ECE9D-60F4-4EAC-A8DD-86F5FC1421EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F236A15F-CF90-4D4C-9C25-F5A624989F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F236A15F-CF90-4D4C-9C25-F5A624989F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F236A15F-CF90-4D4C-9C25-F5A624989F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F236A15F-CF90-4D4C-9C25-F5A624989F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7FB263-2B9A-414E-8881-E3A3F7405C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7FB263-2B9A-414E-8881-E3A3F7405C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7FB263-2B9A-414E-8881-E3A3F7405C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7FB263-2B9A-414E-8881-E3A3F7405C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA051D6-364A-47B7-91CE-3501EBF3791C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA051D6-364A-47B7-91CE-3501EBF3791C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA051D6-364A-47B7-91CE-3501EBF3791C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA051D6-364A-47B7-91CE-3501EBF3791C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75378E15-9F16-45FD-9966-ADCF9FCD5EA8}
+	EndGlobalSection
+EndGlobal

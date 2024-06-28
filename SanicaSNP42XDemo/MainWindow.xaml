@@ -1,0 +1,50 @@
+﻿<Window x:Class="SanicaSNP42XDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SanicaSNP42XDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="960">
+    <Window.DataContext>
+        <local:ViewModel x:Name="viewModel"/>
+    </Window.DataContext>
+    <Grid>
+        <Canvas x:Name="ModelCNVS" Height="425" Margin="5,5,335,0" VerticalAlignment="Top">
+            <Image x:Name="BaseIMG" Height="425" Canvas.Left="0" Canvas.Top="0" Width="613" Source="/base.png"/>
+            <Image x:Name="LoopSensorIMG" Height="226" Canvas.Left="0" Canvas.Bottom="0" Width="450" Source="{Binding LoopSensorImgSrc, Mode=OneWay}"/>
+            <Label x:Name="LoopSensorStatusLB" Content="Label" Canvas.Left="15" Canvas.Top="320" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="35" FontSize="18" FontWeight="Bold"/>
+            <Image x:Name="PlateIMG" Height="216" Canvas.Left="177" Canvas.Top="99" Width="354" Source="{Binding PlateImgSrc, Mode=OneWay}"/>
+            <Image x:Name="ArrowIMG" Height="193" Canvas.Left="181" Canvas.Top="66" Width="341" Source="{Binding ArrowImgSrc, Mode=OneWay}"/>
+        </Canvas>
+
+        <Button x:Name="SendPollingCmdBTN" Content="Start Polling" HorizontalAlignment="Left" Margin="635,10,0,0" VerticalAlignment="Top" Height="25" Width="105" Click="SendPollingCmdBTN_Click"/>
+        <Button x:Name="StopPollingCmdBTN" Content="Stop Polling" HorizontalAlignment="Left" Margin="792,10,0,0" VerticalAlignment="Top" Height="25" Width="105" Click="StopPollingCmdBTN_Click"/>
+        <Button x:Name="GetPlateStatusBTN" Content="Get Plate Status" HorizontalAlignment="Left" Height="25" Margin="635,43,0,0" VerticalAlignment="Top" Width="105" Click="GetPlateStatusBTN_Click"/>
+        <Button x:Name="LoopSensorOnBTN" Content="Turn ON loop sensor" HorizontalAlignment="Left" Height="25" Margin="635,76,0,0" VerticalAlignment="Top" Width="140" Click="LoopSensorOnBTN_Click"/>
+        <Button x:Name="LoopSensorOffBTN" Content="Turn OFF loop sensor" HorizontalAlignment="Left" Height="25" Margin="787,76,0,0" VerticalAlignment="Top" Width="140" Click="LoopSensorOffBTN_Click"/>
+        <Button x:Name="LockingCtrlUpBTN" Content="Set Lock UP" HorizontalAlignment="Left" Height="25" Margin="635,107,0,0" VerticalAlignment="Top" Width="140" Click="LockingCtrlUpBTN_Click"/>
+        <Button x:Name="LockingCtrlDownBTN" Content="Set Lock DOWN" HorizontalAlignment="Left" Height="25" Margin="787,107,0,0" VerticalAlignment="Top" Width="140" Click="LockingCtrlDownBTN_Click"/>
+        <Label Content="Loop Sensor:" HorizontalAlignment="Left" Margin="635,142,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label Content="Mat Switch:" HorizontalAlignment="Left" Margin="635,171,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label Content="Lock Plate:" HorizontalAlignment="Left" Margin="635,201,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label Content="Sensor:" HorizontalAlignment="Left" Margin="635,232,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label Content="Loop Count:" HorizontalAlignment="Left" Margin="635,262,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label Content="Base Count On:" HorizontalAlignment="Left" Margin="635,292,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label Content="Base Count Off:" HorizontalAlignment="Left" Margin="635,322,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label x:Name="LoopSensorLB" Content="OFF" HorizontalAlignment="Left" Margin="785,144,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="MatSwitchLB" Content="OFF" HorizontalAlignment="Left" Margin="785,173,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="LockPlateLB" Content="OFF" HorizontalAlignment="Left" Margin="785,203,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="SensorLB" Content="OFF" HorizontalAlignment="Left" Margin="785,234,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="LoopCountLB" Content="OFF" HorizontalAlignment="Left" Margin="785,263,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="BaseCountOnLB" Content="OFF" HorizontalAlignment="Left" Margin="785,294,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="BaseCountOffLB" Content="OFF" HorizontalAlignment="Left" Margin="785,324,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label Content="Level Count On:" HorizontalAlignment="Left" Margin="635,353,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label Content="Level Count Off:" HorizontalAlignment="Left" Margin="635,383,0,0" VerticalAlignment="Top" Width="140" FontFamily="Lucida Sans Unicode" HorizontalContentAlignment="Right" Height="30" FontSize="14"/>
+        <Label x:Name="LevelCountOnLB" Content="OFF" HorizontalAlignment="Left" Margin="785,355,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="LevelCountOffLB" Content="OFF" HorizontalAlignment="Left" Margin="785,385,0,0" VerticalAlignment="Top" Width="155" FontSize="14" FontFamily="Arial Black"/>
+        <Label x:Name="PollingCntLB" Content="" HorizontalAlignment="Left" Height="25" Margin="740,10,0,0" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Center"/>
+
+
+    </Grid>
+</Window>
