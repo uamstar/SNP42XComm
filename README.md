@@ -2,7 +2,7 @@
 
 This repository contains .NET projects for demonstrating how to communicate with parking lock SNP421/SNP422 produced by SANICA, 株式会社サニカ, and modeling behavior of the lock:  
 
-* SanicaSNP42X -- API for communicate with SNP42X(SNP421/SNP422) parking lock.
+* SanicaSNP42X -- API for communicating with SNP42X(SNP421/SNP422) parking lock.
 * SanicaSNP42XDemo -- A project to demonstrat API SanicaSNP42X usage.
 * SNP42XSimulator -- An emulator used to replace the real SNP42X lock during development.
 * WebSimulateSNP42X -- An emulator based on SNP42XSimulator and can be configured and controlled via webservice.
@@ -21,7 +21,7 @@ The goal of this repository is to develop a simulator that could be used to simu
 ## Development
 Refer to README in the projects.
 
-## TODO
+## To do
 1. Make sure how Loop count, Off base count, On level count, Off level count and On base count work and simulate these numbers.
 2. Collect more regular and irregular conditions of SNP42X and the related data to make the simulation more realistic. 
 
