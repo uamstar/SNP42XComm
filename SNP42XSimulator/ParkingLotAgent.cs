@@ -55,17 +55,20 @@ namespace SNP42XSimulator
                 _comport.DiscardInBuffer();
                 _comport.DiscardOutBuffer();
             }
-            catch (UnauthorizedAccessException)
+            catch (UnauthorizedAccessException exp)
             {
                 flag = true;
+                _logger.Error("fail to open comport.", exp);
             }
-            catch (IOException)
+            catch (IOException exp)
             {
                 flag = true;
+                _logger.Error("fail to open comport.", exp);
             }
-            catch (ArgumentException)
+            catch (ArgumentException exp)
             {
                 flag = true;
+                _logger.Error("fail to open comport.", exp);
             }
             if (flag)
             {
@@ -92,21 +95,25 @@ namespace SNP42XSimulator
 
                         }
                     }
-                    catch (IOException)
+                    catch (IOException exp)
                     {
                         _serialFormer.ResetBufOnException();
+                        _logger.Error("fail to read comport.", exp);
                     }
-                    catch (UnauthorizedAccessException)
+                    catch (UnauthorizedAccessException exp)
                     {
                         _serialFormer.ResetBufOnException();
+                        _logger.Error("fail to read comport.", exp);
                     }
-                    catch (TimeoutException)
+                    catch (TimeoutException exp)
                     {
                         _serialFormer.ResetBufOnException();
+                        _logger.Error("fail to read comport.", exp);
                     }
-                    catch (Exception)
+                    catch (Exception exp)
                     {
                         _serialFormer.ResetBufOnException();
+                        _logger.Error("fail to read comport.", exp);
                     }
                     
                 }

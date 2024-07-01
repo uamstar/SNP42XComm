@@ -1,39 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
-    <Version>0.1.0</Version>
-    
   </PropertyGroup>
 
   <ItemGroup>
-    
-    <PackageReference Include="GenHTTP.Core" Version="8.5.2" />
-    
-    <PackageReference Include="GenHTTP.Modules.Security" Version="8.5.0" />
-    <PackageReference Include="GenHTTP.Modules.Webservices" Version="8.5.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     <PackageReference Include="NLog" Version="5.3.2" />
-    
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SNP42XSimulator\SNP42XSimulator.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DEV\" />
+    <ProjectReference Include="..\SanicaSNP42X\SanicaSNP42X.csproj" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

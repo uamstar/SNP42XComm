@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SanicaSNP42XConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "--port COM14 --address 1"
+    }
+  }
+}

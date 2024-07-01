@@ -19,6 +19,8 @@ namespace WebSimulateSNP42X.Services
 
         public ParkingLotService() 
         {
+            _logger.Info("INIT ParkingLotService.");
+
             Settings settings = Settings.INSTANCE;
 
             _agent = ParkingLotAgent.getInstance(settings.ComportName);
@@ -61,6 +63,7 @@ namespace WebSimulateSNP42X.Services
         [ResourceMethod(RequestMethod.POST, "start")]
         public Result Start()
         {
+            _logger.Info("in RequestMethod.POST start");
             try {
                 _agent.Start();
                 _logger.Info("ParkingLot Agent has started.");

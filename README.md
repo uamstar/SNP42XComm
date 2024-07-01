@@ -4,6 +4,7 @@ This repository contains .NET projects for demonstrating how to communicate with
 
 * SanicaSNP42X -- API for communicating with SNP42X(SNP421/SNP422) parking lock.
 * SanicaSNP42XDemo -- A project to demonstrat API SanicaSNP42X usage.
+* SanicaSNP42XConsole -- A console project to demonstrat API SanicaSNP42X usage.
 * SNP42XSimulator -- An emulator used to replace the real SNP42X lock during development.
 * WebSimulateSNP42X -- An emulator based on SNP42XSimulator and can be configured and controlled via webservice.
 
