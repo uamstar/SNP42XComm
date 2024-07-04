@@ -20,6 +20,7 @@ namespace SanicaSNP42XConsole
         public void Error(string msg, Exception ex = null)
         {
             LOGGER.Error(ex, msg);
+            if(ex != null) LOGGER.Error(ex.Message);
         }
 
         public void Info(string msg)

@@ -52,8 +52,14 @@ namespace SanicaSNP42XConsole
                 Console.WriteLine($"SanicaSNP42X Console {VER}");
                 Console.WriteLine($"Use {port}, SNP42X address {address}");
 
+                string strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                strExeFilePath = strExeFilePath.Substring(0, strExeFilePath.LastIndexOf(Path.DirectorySeparatorChar));
+                string settingsFilePath = Path.Combine(strExeFilePath, "appsettings.json");
+
+                Console.WriteLine($"Use settings file: {settingsFilePath}");
+
                 IConfigurationRoot config = new ConfigurationBuilder()
-                    .AddJsonFile("appsettings.json")
+                    .AddJsonFile(settingsFilePath)
                     .AddEnvironmentVariables()
                     .Build();
 
